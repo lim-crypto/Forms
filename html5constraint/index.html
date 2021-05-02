@@ -21,8 +21,7 @@
                 <div class="valid-feedback">
                     Looks good!
                 </div>
-                <div class="invalid-feedback">
-                    Please enter something
+                <div class="invalid-feedback"> 
                 </div>
             </div>
             <div class="col-md-5">
@@ -32,8 +31,7 @@
                     <input type="email" class="form-control" id="email" value="example@email.com"
                         pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
                         aria-describedby="inputGroupPrepend" required>
-                    <div class="invalid-feedback">
-                        Please enter a valid email
+                    <div class="invalid-feedback"> 
                     </div>
                     <div class="valid-feedback">
                         Looks good!
@@ -44,52 +42,35 @@
             <div class="col-md-4">
                 <label for="url" class="form-label">Url</label>
                 <input type="url" class="form-control" id="url" required value="https://getbootstrap.com/">
-                <div class="invalid-feedback">
-                    Please provide a valid url
+                <div class="invalid-feedback"> 
                 </div>
             </div>
 
             <div class="col-md-3">
-                <label for="tel" class="form-label">tel number (ph) </label>
-                <!-- <input type="tel" class="form-control" id="tel" required pattern="[0-9\-\+\s\(\)]{10,17}$">  -->
-
+                <label for="tel" class="form-label">tel number (ph) </label> 
                 <input type="tel" class="form-control" id="tel" value="09876543210" required
-                    pattern="[0-9\+\(\)]{4,6}[\-\s]{0,1}[0-9]{3}[\-\s]{0,1}[0-9]{4}$">
-
-                <!-- = ^\d{4}-\d{3}-\d{4}$
-                    0912-345-6789  -->
-
-                <div class="invalid-feedback">
-                    Please provide a valid (PH) phone number <br>
-                    <!-- Example: <br>
-                    +639123456789 , <br>
-                    09123456789 , <br>
-                    0912-345-6789 , <br>
-                    0912 345 6789 , <br>
-                    (0912) 345 6789 -->
+                    pattern="[0-9\+\(\)]{4,6}[\-\s]{0,1}[0-9]{3}[\-\s]{0,1}[0-9]{4}$"> 
+                <div class="invalid-feedback"> 
                 </div>
             </div>
 
             <div class="col-md-3">
                 <label for="zip" class="form-label">Zip</label>
                 <input type="text" class="form-control" id="zip" value="1234" pattern="^[0-9]{3,4}$" required>
-                <div class="invalid-feedback">
-                    Please provide a valid zip. 3-4 numbers only
+                <div class="invalid-feedback"> 
                 </div>
             </div>
 
             <div class="col-md-3">
                 <label for="datemax" class="form-label">Birthday:</label>
                 <input type="date" id="datemax" name="datemax" class="form-control" max="" value="">
-                <div class="invalid-feedback">
-                    Enter a date before 01-01-2021:
+                <div class="invalid-feedback"> 
                 </div>
             </div>
             <div class="col-md-3">
                 <label for="datemin" class="form-label">Reservation date </label>
                 <input type="date" id="datemin" name="datemin" class="form-control" min="" value="">
-                <div class="invalid-feedback">
-                    Enter a date after 01-01-2021:
+                <div class="invalid-feedback"> 
                 </div>
             </div>
             <br><br>
@@ -102,8 +83,7 @@
                 <div class="valid-feedback">
                     Looks good!
                 </div>
-                <div class="invalid-feedback">
-                    Password must be alphanumeric and more than 8 characters.
+                <div class="invalid-feedback"> 
                 </div>
             </div>
             <div class="col-md-3">
@@ -113,8 +93,7 @@
                 <div class="valid-feedback">
                     Looks good!
                 </div>
-                <div class="invalid-feedback">
-                    Password must match
+                <div class="invalid-feedback"> 
                 </div>
             </div>
             <div class="mb-3">
@@ -122,15 +101,14 @@
                 <textarea rows="5" class="form-control" id="validationTextarea" placeholder="Required example textarea" required>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, nihil.
 
                 </textarea>
-                <div class="invalid-feedback">
-                    Please enter a message in the textarea.
+                <div class="invalid-feedback"> 
                 </div>
             </div>
 
             <div class="form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
                 <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
-                <div class="invalid-feedback">Example invalid feedback text</div>
+                <div class="invalid-feedback"></div>
             </div>
 
             <div class="form-check">
@@ -140,7 +118,7 @@
             <div class="form-check mb-3">
                 <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
                 <label class="form-check-label" for="validationFormCheck3">Or toggle this other radio</label>
-                <div class="invalid-feedback">More example invalid feedback text</div>
+                <div class="invalid-feedback"></div>
             </div>
 
             <div class="mb-3">
@@ -150,12 +128,12 @@
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
-                <div class="invalid-feedback">Example invalid select feedback</div>
+                <div class="invalid-feedback"></div>
             </div>
 
             <div class="mb-3">
                 <input type="file" class="form-control" aria-label="file example" required>
-                <div class="invalid-feedback">Example invalid form file feedback</div>
+                <div class="invalid-feedback"></div>
             </div>
 
             <div class="col-12">
@@ -165,7 +143,6 @@
                         Agree to terms and conditions
                     </label>
                     <div class="invalid-feedback">
-                        You must agree before submitting.
                     </div>
                 </div>
             </div>

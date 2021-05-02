@@ -10,10 +10,22 @@
     Array.prototype.slice.call(forms)
         .forEach(function (form) {
             form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
+                var textarea = Array.from(form.querySelectorAll('textarea'));
+                var select = Array.from(form.querySelectorAll('select'));
+                // var datalist = Array.from(form.querySelectorAll('datalist'));
+                var input = Array.from( form.querySelectorAll('input')); 
+                var inpObj = input.concat(textarea, select); 
+                for (var i = 0; i < inpObj.length; i++) { 
+                    if (!inpObj[i].checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        for( var j = 0 ; j<inpObj[i].parentNode.children.length ; j++){
+                            if(inpObj[i].parentNode.children[j].classList.contains('invalid-feedback')){
+                                inpObj[i].parentNode.children[j].innerHTML = inpObj[i].validationMessage;
+                            }
+                        }
+                    } 
+                }  
 
                 form.classList.add('was-validated')
             }, false)
@@ -47,7 +59,6 @@ let year = today.getFullYear();
 let month = ("0" + (today.getMonth() + 1)).slice(-2);
 let day = ("0" + today.getDate()).slice(-2);
 let date = `${year}-${month}-${day}`;
-console.log(date);
 let min= document.querySelector('#datemin');
 let max = document.querySelector('#datemax');
 min.setAttribute('min', date);
